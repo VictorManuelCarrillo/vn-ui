@@ -1,0 +1,72 @@
+@use "../tokens/colors" as *;
+@use "../tokens/sizes" as *;
+@use "sass:map";
+
+.NvButton {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  margin: 0.05rem;
+  border-radius: var(--radius);
+}
+
+// Color classes
+@each $name, $value in $colors {
+  .NvButton__color-#{$name} {
+    --btn-color: #{$value};
+  }
+}
+
+// Size classes
+@each $name, $config in $button-sizes {
+  .NvButton--size-#{$name} {
+    padding: map.get($config, padding);
+    font-size: map.get($config, font-size);
+  }
+}
+
+// Variants
+.NvButton--solid {
+  background-color: var(--btn-color);
+  border: 1px solid var(--btn-color);
+  color: var(--color-background);
+}
+
+.NvButton--outlined {
+  background-color: transparent;
+  border: 1px solid var(--btn-color);
+  color: var(--btn-color);
+}
+
+.NvButton--ghost {
+  background-color: transparent;
+  border: none;
+  color: var(--btn-color);
+}
+
+.NvButton--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+//shape
+$shape: (
+  normal: (
+    var(--radius),
+  ),
+  rounded: (
+    0.6rem,
+  ),
+  pill: (
+    5rem,
+  ),
+);
+.NvButton {
+  &__shape {
+    @each $case, $value in $shape {
+      &-#{$case} {
+        border-radius: $value
+      }
+    }
+  }
+}

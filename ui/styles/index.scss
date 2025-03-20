@@ -1,3 +1,8 @@
+//TODO revisar los import y si es posible eliminar y refactor
+// @use './tokens';
+// @use './button';
 
-@use './tokens';
-@use './button';
+@use './tokens/colors';
+@use './tokens/sizes';
+@use './components/button';
+

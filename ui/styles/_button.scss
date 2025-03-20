@@ -1,78 +1,43 @@
-.ui-button {
-  padding: var(--spacing-md);
-  border-radius: var(--radius);
-  border: 1px solid var(--color-border);
-  cursor: pointer;
-  transition: background-color 0.2s ease;
 
-  &--primary {
-    background-color: var(--color-primary);
-    color: var(--color-background);
-  }
-  &--secondary {
-    background-color: var(--color-secondary);
-    color: var(--color-background);
-  }
-  &--error {
-    background-color: var(--color-error);
-    color: var(--color-background);
-  }
-  &--warning {
-    background-color: var(--color-warning);
-    color: var(--color-background);
-  }
-  &--info {
-    background-color: var(--color-info);
-    color: var(--color-background);
-  }
-  &--success {
-    background-color: var(--color-success);
-    color: var(--color-background);
-  }
-  &--disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
-}
+// $colors: (
+//   'primary': var(--color-primary),
+//   'secondary': var(--color-secondary),
+//   'error': var(--color-error),
+//   'warning': var(--color-warning),
+//   'info': var(--color-info),
+//   'success': var(--color-success),
+// );
 
-$colors: (
-  'primary': var(--color-primary),
-  'secondary': var(--color-secondary),
-  'error': var(--color-error),
-  'warning': var(--color-warning),
-  'info': var(--color-info),
-  'success': var(--color-success),
-);
+// .NvButton {
+// display: inline-flex;
+// padding: 0.4rem 1rem;
+//   border-radius: var(--radius);
+//   border: 1px solid var(--color-border);
+//   cursor: pointer;
+//   transition: background-color 0.2s ease;
+//   &__color {
+//     @each $name, $value in $colors {
+//       &-#{$name} {
+//         --btn-color: #{$value};
+//       }
+//     }
+//   }
 
-.NvButton {
-  padding: var(--spacing-md);
-  border-radius: var(--radius);
-  border: 1px solid var(--color-border);
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  &__color {
-    @each $name, $value in $colors {
-      &-#{$name} {
-        --btn-color: #{$value};
-      }
-    }
-  }
+// }
+// .NvButton--filled {
+//   background-color: var(--btn-color);
+//   border: 1px solid var(--btn-color);
+//   color: var(--color-background);
+// }
 
-}
-.NvButton--filled {
-  background-color: var(--btn-color);
-  border: 1px solid var(--btn-color);
-  color: var(--color-background);
-}
+// .NvButton--outlined {
+//   background-color: transparent;
+//   border: 1px solid var(--btn-color);
+//   color: var(--btn-color);
+// }
 
-.NvButton--outlined {
-  background-color: transparent;
-  border: 1px solid var(--btn-color);
-  color: var(--btn-color);
-}
-
-.NvButton--ghost {
-  background-color: transparent;
-  border: none;
-  color: var(--btn-color);
-}
+// .NvButton--ghost {
+//   background-color: transparent;
+//   border: none;
+//   color: var(--btn-color);
+// }

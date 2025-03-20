@@ -25,7 +25,7 @@ export const themes: Record<string, ThemeDefinition> = {
       md: '16px',
       lg: '24px'
     },
-    borderRadius: '8px'
+    borderRadius: '3px'
   },
   dark: {
     name: 'dark',
