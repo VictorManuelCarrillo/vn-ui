@@ -35,10 +35,14 @@
   }
 }
 
-
-
-
-
+$colors: (
+  'primary': var(--color-primary),
+  'secondary': var(--color-secondary),
+  'error': var(--color-error),
+  'warning': var(--color-warning),
+  'info': var(--color-info),
+  'success': var(--color-success),
+);
 
 .NvButton {
   padding: var(--spacing-md);
@@ -47,17 +51,28 @@
   cursor: pointer;
   transition: background-color 0.2s ease;
   &__color {
-    &-primary {
-      background-color: var(--color-primary);
-      color: var(--color-background);
-  }
-  }
-  &__variant{
-    &-outlined {
-
-      background-color: #00000000;
-      border: 5px solid var(--color-primary);
-      color: var(--color-primary);
+    @each $name, $value in $colors {
+      &-#{$name} {
+        --btn-color: #{$value};
+      }
     }
   }
+
+}
+.NvButton--filled {
+  background-color: var(--btn-color);
+  border: 1px solid var(--btn-color);
+  color: var(--color-background);
+}
+
+.NvButton--outlined {
+  background-color: transparent;
+  border: 1px solid var(--btn-color);
+  color: var(--btn-color);
+}
+
+.NvButton--ghost {
+  background-color: transparent;
+  border: none;
+  color: var(--btn-color);
 }
