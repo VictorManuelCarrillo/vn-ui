@@ -1,5 +1,6 @@
 {
-  "name": "nuxt-app",
+  "name": "vn-ui",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,6 +11,7 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint",
     "lint:fix": "eslint . --fix",
+    "release": "bumpp --commit --push --tag",
     "prepare": "husky"
   },
   "dependencies": {
