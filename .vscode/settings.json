@@ -3,5 +3,8 @@
     "bumpp",
     "nuxt",
     "Nuxt"
+  ],
+  "conventionalCommits.scopes": [
+    "integracion"
   ]
 }
