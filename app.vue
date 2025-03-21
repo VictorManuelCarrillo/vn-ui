@@ -14,6 +14,9 @@
   <NvButton shape="normal">button normal</NvButton>
   <NvButton shape="rounded">button rounded</NvButton>
   <NvButton shape="pill" disabled>button pill</NvButton>
+  <h2>ola</h2>
+  <NvButton gradient color="error">Mono Gradiente Default</NvButton>
+<NvButton gradient="green-lime">Colorful Gradient</NvButton>
   <slot />
 </template>
 <script setup lang="ts">

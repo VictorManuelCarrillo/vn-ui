@@ -1,5 +1,7 @@
 @use "../tokens/colors" as *;
 @use "../tokens/sizes" as *;
+
+@use "../tokens/gradients" as *;
 @use "sass:map";
 
 .NvButton {
@@ -65,8 +67,26 @@ $shape: (
   &__shape {
     @each $case, $value in $shape {
       &-#{$case} {
-        border-radius: $value
+        border-radius: $value;
       }
     }
   }
+}
+
+// @each $name, $value in $button-gradients {
+//   .NvButton__gradient-#{$name} {
+//     --btn-gradient: #{$value};
+//   }
+// }
+
+.NvButton--gradient {
+  background: var(--btn-gradient);
+  color: var(--color-background);
+}
+
+.NvButton__gradient-default {
+  --btn-gradient: var(--gradient-default);
+}
+.NvButton__gradient-green-lime {
+  --btn-gradient: var(--gradient-greenLime);
 }

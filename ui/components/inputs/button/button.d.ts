@@ -8,4 +8,5 @@ export interface ButtonProps {
   type?: "button" | "submit" | "reset";
   size?: "sm" | "md" | "lg";
   shape?: "normal" | "rounded" | "pill";
+  gradient?: boolean | string;
 }

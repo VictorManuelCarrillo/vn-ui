@@ -1,6 +1,7 @@
 export type ThemeDefinition = {
   name: string
   palette: Record<string, string>
+  gradients: Record<string, string>
   spacing: Record<string, string>
   borderRadius: string
 }
@@ -18,6 +19,11 @@ export const themes: Record<string, ThemeDefinition> = {
       info: '#0288d1',
       success: '#2e7d32',
       border: '#e0e0e0'
+    },
+    gradients: {
+      default: 'linear-gradient(to right, var(--color-primary), #1e40af)',
+      bluePink: 'linear-gradient(90deg, #3b82f6, #ec4899)',
+      greenLime: 'linear-gradient(90deg, #10b981, #a3e635)'
     },
     spacing: {
       xs: '4px',
@@ -39,6 +45,11 @@ export const themes: Record<string, ThemeDefinition> = {
       info: '#03a9f4',
       success: '#66bb6a',
       border: '#333333'
+    },
+    gradients: {
+      default: 'linear-gradient(to right, var(--color-primary), #1e40af)',
+      bluePink: 'linear-gradient(90deg, #3b82f6, #ec4899)',
+      greenLime: 'linear-gradient(90deg, #10b981, #a3e635)'
     },
     spacing: {
       xs: '4px',

@@ -27,6 +27,15 @@ const activeVariant = computed(() => {
   if (props.filled) return 'solid'
   return 'solid'
 })
+
+
+const gradientClass = computed(() => {
+  if (!props.gradient) return null
+  if (typeof props.gradient === 'string') return `NvButton__gradient-${props.gradient}`
+  return 'NvButton__gradient-default'
+})
+
+
 const Nv = 'NvButton';
 const buttonClasses = computed(() => [
   'NvButton',
@@ -34,6 +43,10 @@ const buttonClasses = computed(() => [
   `NvButton--${activeVariant.value}`,
   `NvButton--size-${props.size}`,
   Nv+'__shape-'+props.shape,
+
+
+  props.gradient && 'NvButton--gradient',
+  gradientClass.value,
 
   props.disabled && 'NvButton--disabled'
 ])

@@ -1,0 +1,9 @@
+//TODO revisar si aun funciona o se quita
+@use "./colors" as *;
+
+$button-gradients: (
+  "default":
+    linear-gradient(to right, var(--btn-color), var(--btn-color)),
+  "blue-pink": linear-gradient(90deg, #3b82f6, #ec4899),
+  "green-lime": linear-gradient(90deg, #10b981, #a3e635),
+);

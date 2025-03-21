@@ -18,6 +18,11 @@ export const useThemeProvider = () => {
       root.style.setProperty(`--spacing-${key}`, value)
     )
 
+
+    Object.entries(themeConfig.gradients).forEach(([key, value]) => {
+      root.style.setProperty(`--gradient-${key}`, value)
+    })
+
     root.style.setProperty('--radius', themeConfig.borderRadius)
   }
 
